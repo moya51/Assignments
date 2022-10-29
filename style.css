@@ -1,0 +1,93 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    min-height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.tcard {
+    /* height: 300px; */
+    width: 600px;
+    display: flex;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.items {
+    padding: 30px;
+    display: flex;
+    display: flex;
+    flex-direction: column; /*Puts all the items in columns in order*/
+    align-items: flex-start;
+    gap: 30px;
+}
+
+.one {
+    background-color: hsl(31, 77%, 52%);
+}
+
+.one button {
+    color: hsl(31, 77%, 52%);
+}
+
+.two button {
+    color:  hsl(184, 100%, 22%);
+}
+
+.two {
+    background-color: hsl(184, 100%, 22%);
+}
+
+.three {
+    background-color: hsl(179, 100%, 13%);
+}
+
+.three button {
+    color: hsl(179, 100%, 13%);
+}
+
+.items h2 {
+    color: hsl(0, 0%, 95%);
+}
+
+.items p {
+    color: hsl(0, 0%, 100%, 0.75);
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 15px;
+     flex-grow: 1;    /*paragraph takes the available space so the words in the 3 paragraphs take up the same space and look equal*/
+}
+
+.items button {
+    background-color: hsl(0, 0%, 95%);
+    padding: 10px 20px;
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.5s ease;
+}
+
+.items button:hover {
+    background-color: transparent;
+    border: 2px solid hsl(0, 0%, 95%);
+    padding: 8px 18px;                     /*stops the card from bouncing after hovering on it because the cursor takes up 2 px space so we reduce the paddings by 2px*/
+    color: hsl(0, 0%, 95%);
+}
+
+@media screen and (max-width: 550px) {
+    body {
+        padding: 50px 20px;
+    }
+
+    .tcard {
+        flex-direction: column;
+    }
+
+}
